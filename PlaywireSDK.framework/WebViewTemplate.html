@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"></meta>
+        <title></title>
+        <style>
+            #webview {
+                height: 100vh !important;
+            }
+        </style>
+    </head>
+    <body>
+        <script
+            type="text/javascript"
+            charset="utf-8"
+            src="http://html5player.gamezone.com/bolt-ios/zeus/embed.js"
+            data-id="webview"
+            data-onready="onBoltReady"
+            data-player-type="mobile"
+            playerConfig
+        >
+        </script>
+        <script>
+            function onBoltReady(){
+                var bolt = window.Bolt;
+                bolt.on('webview',bolt.BOLT_AD_REQUEST_START, boltListener);
+                bolt.on('webview',bolt.BOLT_AD_STARTED, boltListener);
+                bolt.on('webview',bolt.BOLT_AD_COMPLETE, boltListener);
+                bolt.on('webview',bolt.BOLT_AD_ERROR, boltListener);
+                bolt.on('webview',bolt.BOLT_AD_CLICKED, boltListener);
+                window.location = 'ios://boltready';
+            }
+        function boltListener(playerId, eventData, eventName){
+            window.location = 'ios://' + eventName + '#' + encodeURIComponent(JSON.stringify(eventData));
+        }
+        </script>
+    </body>
+</html>

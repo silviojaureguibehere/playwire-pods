@@ -1,0 +1,10 @@
+framework module PlaywireSDK {
+  umbrella header "PlaywireSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module PlaywireSDK.Swift {
+    header "PlaywireSDK-Swift.h"
+}
