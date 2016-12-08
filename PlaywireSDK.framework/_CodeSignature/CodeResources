@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		fewvk89iz3gOTRCBXQXKrHiEvTs=
+		MbeP9IAVo174wVpIWFE4PdJjl3I=
 		</data>
 		<key>Headers/PlaywireSDK-Swift.h</key>
 		<data>
-		TskINhx+tHHE1BXlnM0dFcKIz/M=
+		WOUmz452RCaOYmg516GhZaSSLwE=
 		</data>
 		<key>Headers/PlaywireSDK.h</key>
 		<data>
@@ -18,23 +18,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Hx9N2Kh8cL5syKbJpyEBjmRm74A=
+		LToZZyEKCxC/CT+LsDIY+CoI+BY=
 		</data>
 		<key>Modules/PlaywireSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		hkYLgj/icEMddTuetD5AMwuVELE=
+		lrcx7930hQFU3y3I5QS45TfzEds=
 		</data>
 		<key>Modules/PlaywireSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		mT6hZA5OgSymbrVvlkh4W/8mYAY=
+		E5JJi+C0PRtIzqkgFEqp55xMJh4=
 		</data>
 		<key>Modules/PlaywireSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		4M65hczZe56LNlwI5j+3MAAfP+o=
+		NY6rQUOa/xJS7Rsl8OXhnioqfnA=
 		</data>
 		<key>Modules/PlaywireSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		QP42bUneMlD6m87H6K+25HAwyB4=
+		3CP63FDXQhxXAsJmgcpwCJTuGmY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -59,22 +59,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fewvk89iz3gOTRCBXQXKrHiEvTs=
+			MbeP9IAVo174wVpIWFE4PdJjl3I=
 			</data>
 			<key>hash2</key>
 			<data>
-			G25i66jib8zmXOQ4WhoCWtOU27MSyVOzdPK2rOqRusQ=
+			EXa4ihyAOB8k4p4eZ2+TwngJJM5xpbU+x21vVm1UoVI=
 			</data>
 		</dict>
 		<key>Headers/PlaywireSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			TskINhx+tHHE1BXlnM0dFcKIz/M=
+			WOUmz452RCaOYmg516GhZaSSLwE=
 			</data>
 			<key>hash2</key>
 			<data>
-			bF9lIxMxhYqxKDp1k0tQGMkUXmVbbh+oAkZOeGe61qQ=
+			OPvERHpsjT061wzDAtuV/DkjaJr6gLRjPQMUeY+CHyU=
 			</data>
 		</dict>
 		<key>Headers/PlaywireSDK.h</key>
@@ -92,44 +92,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hkYLgj/icEMddTuetD5AMwuVELE=
+			lrcx7930hQFU3y3I5QS45TfzEds=
 			</data>
 			<key>hash2</key>
 			<data>
-			y3EtbWAioS1Vk93HKfuf2bl5Eo3fO+oXpWZjaAsgoN4=
+			vJgc5gYYTjuVnXFjUThRw7BGNQni95bkZ9I9jIx2/OI=
 			</data>
 		</dict>
 		<key>Modules/PlaywireSDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mT6hZA5OgSymbrVvlkh4W/8mYAY=
+			E5JJi+C0PRtIzqkgFEqp55xMJh4=
 			</data>
 			<key>hash2</key>
 			<data>
-			jcKIcuQBRtxf7UeYP3hf2zwD0wT026DhgjgmhybSS78=
+			Us6GP3ZZJoAwjR7topmuTpsCxz5ncr4Xwtd7+OsheDg=
 			</data>
 		</dict>
 		<key>Modules/PlaywireSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4M65hczZe56LNlwI5j+3MAAfP+o=
+			NY6rQUOa/xJS7Rsl8OXhnioqfnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			C4EKvkjNg+h41GZL0u3avaon7Y4/aIr3BwxL4m5U3+8=
+			1yW6H1klAKwPtakAdlBw63Gj5TSwJ9VjQMpy/fny3x4=
 			</data>
 		</dict>
 		<key>Modules/PlaywireSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QP42bUneMlD6m87H6K+25HAwyB4=
+			3CP63FDXQhxXAsJmgcpwCJTuGmY=
 			</data>
 			<key>hash2</key>
 			<data>
-			zjG/Vl05HuHeVPeCUyORpMHy/AWIjrs23trchUOk73Y=
+			2lDF5ghtV1ecXVhbR2SqmTm7D5mcm8+mwr7kieoKBH0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
