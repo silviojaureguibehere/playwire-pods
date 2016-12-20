@@ -124,23 +124,36 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 
+@interface NSError (SWIFT_EXTENSION(PlaywireSDK))
+@end
+
+
 @interface NSNumber (SWIFT_EXTENSION(PlaywireSDK))
 @end
 
 
-SWIFT_CLASS("_TtC11PlaywireSDK18PlaywireAPIManager")
-@interface PlaywireAPIManager : NSObject
+SWIFT_CLASS("_TtC11PlaywireSDK11PWAdManager")
+@interface PWAdManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
+- (void)startAdSession;
+- (void)startAdSessionWithLoop:(BOOL)loop;
+- (BOOL)isAdReady;
 @end
 
-@class PlaywireCreativeFeeder;
+@class UIViewController;
 
-SWIFT_CLASS("_TtC11PlaywireSDK17PlaywireAdManager")
-@interface PlaywireAdManager : NSObject
-@property (nonatomic, readonly, strong) PlaywireCreativeFeeder * _Nonnull creativeFeeder;
-- (void)configureView;
+SWIFT_CLASS("_TtC11PlaywireSDK21PWAdManagerFullScreen")
+@interface PWAdManagerFullScreen : PWAdManager
+- (nonnull instancetype)initWithAuth:(NSString * _Nonnull)auth controller:(UIViewController * _Nullable)controller;
+- (void)presentAdWithController:(UIViewController * _Nonnull)controller;
+@end
+
+@class UIView;
+
+SWIFT_CLASS("_TtC11PlaywireSDK21PWAdManagerViewHolder")
+@interface PWAdManagerViewHolder : PWAdManager
+- (nonnull instancetype)initWithAuth:(NSString * _Nonnull)auth controller:(UIViewController * _Nonnull)controller view:(UIView * _Nonnull)view OBJC_DESIGNATED_INITIALIZER;
 - (void)presentAd;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
 @class NSCoder;
@@ -149,29 +162,8 @@ SWIFT_CLASS("_TtC11PlaywireSDK29PlaywireAdManagerActivityView")
 @interface PlaywireAdManagerActivityView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithManager:(PlaywireAdManager * _Nonnull)manager;
+- (nonnull instancetype)initWithManager:(PWAdManager * _Nonnull)manager;
 - (void)layoutSubviews;
-@end
-
-
-SWIFT_CLASS("_TtC11PlaywireSDK25PlaywireConfigFileManager")
-@interface PlaywireConfigFileManager : PlaywireAPIManager
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PlaywireConfigFileManager * _Nonnull sharedInstance;)
-+ (PlaywireConfigFileManager * _Nonnull)sharedInstance;
-@end
-
-
-SWIFT_CLASS("_TtC11PlaywireSDK22PlaywireCreativeFeeder")
-@interface PlaywireCreativeFeeder : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
-@class UIViewController;
-
-SWIFT_CLASS("_TtC11PlaywireSDK27PlaywireFullScreenAdManager")
-@interface PlaywireFullScreenAdManager : PlaywireAdManager
-- (nonnull instancetype)initWithAuth:(NSString * _Nonnull)auth controller:(UIViewController * _Nullable)controller;
-- (void)presentAd;
 @end
 
 @class UIWebView;
@@ -247,15 +239,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PlaywireView
 
 
 
-SWIFT_CLASS("_TtC11PlaywireSDK27PlaywireViewHolderAdManager")
-@interface PlaywireViewHolderAdManager : PlaywireAdManager
-- (nonnull instancetype)initWithAuth:(NSString * _Nonnull)auth controller:(UIViewController * _Nonnull)controller view:(UIView * _Nonnull)view OBJC_DESIGNATED_INITIALIZER;
-- (void)presentAd;
+@interface UIDevice (SWIFT_EXTENSION(PlaywireSDK))
+@property (nonatomic, readonly, copy) NSString * _Nonnull modelName;
 @end
 
 
-@interface UIDevice (SWIFT_EXTENSION(PlaywireSDK))
-@property (nonatomic, readonly, copy) NSString * _Nonnull modelName;
+@interface UIViewController (SWIFT_EXTENSION(PlaywireSDK))
+- (void)displayWithMsg:(NSString * _Nonnull)msg;
 @end
 
 #pragma clang diagnostic pop
