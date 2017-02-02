@@ -118,7 +118,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
-@import CoreGraphics;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -155,88 +154,6 @@ SWIFT_CLASS("_TtC11PlaywireSDK21PWAdManagerViewHolder")
 - (nonnull instancetype)initWithAuth:(NSString * _Nonnull)auth controller:(UIViewController * _Nonnull)controller view:(UIView * _Nonnull)view OBJC_DESIGNATED_INITIALIZER;
 - (void)presentAd;
 @end
-
-@class NSCoder;
-
-SWIFT_CLASS("_TtC11PlaywireSDK29PlaywireAdManagerActivityView")
-@interface PlaywireAdManagerActivityView : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithManager:(PWAdManager * _Nonnull)manager;
-- (void)layoutSubviews;
-@end
-
-@class UIWebView;
-@protocol PlaywireViewDelegate;
-
-SWIFT_CLASS("_TtC11PlaywireSDK12PlaywireView")
-@interface PlaywireView : UIView <UIWebViewDelegate>
-@property (nonatomic, weak) id <PlaywireViewDelegate> _Nullable delegate;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)preparePlayer;
-- (BOOL)webView:(UIWebView * _Nonnull)webView shouldStartLoadWithRequest:(NSURLRequest * _Nonnull)request navigationType:(UIWebViewNavigationType)navigationType;
-- (void)stop;
-- (void)start;
-- (void)webViewDidFinishLoad:(UIWebView * _Nonnull)webView;
-@end
-
-
-SWIFT_PROTOCOL("_TtP11PlaywireSDK20PlaywireViewDelegate_")
-@protocol PlaywireViewDelegate
-@optional
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView playerTimeOutWithTime:(double)time;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView playerReadyWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adRequestedWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adStartedWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adErrorWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adCompleteWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adClickedWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-@end
-
-@protocol PlaywireViewControllerDelegate;
-@class NSBundle;
-
-SWIFT_CLASS("_TtC11PlaywireSDK22PlaywireViewController")
-@interface PlaywireViewController : UIViewController <PlaywireViewDelegate>
-@property (nonatomic, weak) id <PlaywireViewControllerDelegate> _Nullable delegate;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
-- (void)presentOnViewControllerWithController:(UIViewController * _Nonnull)controller animated:(BOOL)animated dismiss:(void (^ _Nullable)(void))dismiss;
-- (void)preparePlayer;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView playerReadyWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView playerTimeOutWithTime:(double)time;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adErrorWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adCompleteWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-- (void)playwireViewWithPlaywireView:(PlaywireView * _Nonnull)playwireView adClickedWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-@property (nonatomic, readonly) BOOL isReady;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_PROTOCOL("_TtP11PlaywireSDK30PlaywireViewControllerDelegate_")
-@protocol PlaywireViewControllerDelegate
-@optional
-- (void)playwireViewControllerWithPlaywireViewController:(PlaywireViewController * _Nonnull)playwireViewController playerTimeOutWithTime:(double)time;
-- (void)playwireViewControllerWithPlaywireViewController:(PlaywireViewController * _Nonnull)playwireViewController playerReadyWithParams:(NSDictionary<NSString *, id> * _Nullable)params;
-@end
-
-
-SWIFT_CLASS("_TtC11PlaywireSDK29PlaywireViewControllerManager")
-@interface PlaywireViewControllerManager : NSObject <PlaywireViewControllerDelegate>
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable auth;)
-+ (NSString * _Nullable)auth;
-+ (void)setAuth:(NSString * _Nullable)newAuth;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PlaywireViewControllerManager * _Null_unspecified sharedInstance;)
-+ (PlaywireViewControllerManager * _Null_unspecified)sharedInstance;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-- (NSString * _Nonnull)playwireApplicationId;
-- (void)showRewardedVideoOnControllerWithController:(UIViewController * _Nonnull)controller dismiss:(void (^ _Nullable)(void))dismiss;
-@property (nonatomic, readonly) BOOL isReady;
-@end
-
 
 
 @interface UIDevice (SWIFT_EXTENSION(PlaywireSDK))
